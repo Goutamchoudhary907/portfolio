@@ -1,65 +1,110 @@
 import React from 'react';
+import { FiBook, FiBriefcase, FiCode, FiUser } from 'react-icons/fi';
 
 export default function AboutMe() {
   return (
-    <section id="aboutMe" className="relative py-16 px-4 mt-30">
-      <div className="max-w-6xl mx-auto">
+    <section id="aboutMe" className="relative py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Simple Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2788ea] dark:text-[#0EA1E5] inline-block relative pb-2">
+          <h2 className="text-4xl font-bold text-[#2788ea] dark:text-[#0EA1E5] mb-4">
             About Me
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-green-400"></span>
           </h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            A quick introduction about who I am and what I do
+          </p>
         </div>
 
-       <div className="grid md:grid-cols-12 gap-8">
-  <div className="md:col-span-7 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 min-h-[calc(100%-32px)]">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              I'm a Full Stack Developer with a strong focus on backend development, specializing in building robust, scalable applications using both relational (PostgreSQL) and NoSQL (MongoDB) databases within the MERN stack (MongoDB, Express.js, React, Node.js).
-            </p>
-            
-            <div className="p-6 bg-blue-50 dark:bg-gray-700 rounded-lg mb-6">
-              <p className="text-gray-700 dark:text-gray-300 italic">
-                "My passion lies in creating efficient solutions that solve real-world problems while delivering exceptional user experiences."
-              </p>
+        {/* Simple Two Column Layout */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Left - Education & Background */}
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                <FiBook className="text-blue-600 dark:text-blue-400 text-xl" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Education
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Final Year B.Tech Student<br />
+                  Computer Science & Engineering
+                </p>
+              </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-gray-100 dark:border-gray-700">
-              <h3 className="text-xl font-semibold text-[#2788ea] dark:text-[#0EA1E5] mb-3">
-                Beyond Code
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300">
-                I'm deeply invested in continuous learning, constantly exploring new database technologies and system architectures to solve problems elegantly. Whether it's optimizing SQL queries, designing NoSQL schemas, or refining API endpoints, I obsess over details that make systems reliable and efficient.
-              </p>
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                <FiCode className="text-green-600 dark:text-green-400 text-xl" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Current Focus
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Building production-ready web applications<br />
+                  Full Stack Development (MERN)<br />
+                  Real-world client projects & personal learning
+                </p>
+              </div>
             </div>
           </div>
 
-           <div className="md:col-span-5">
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 sticky top-4 h-full">
-            <h3 className="text-2xl font-semibold text-[#2788ea] dark:text-[#0EA1E5] mb-4 flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                What I Deliver
-              </h3>
-              
-              <ul className="space-y-3 cursor-pointer">
-                {[
-                  "End-to-End Development: From dynamic React frontends to high-performance Node.js APIs",
-                  "Database Expertise: PostgreSQL for complex relational models and MongoDB for flexible NoSQL solutions",
-                  "Backend Architecture: Designing scalable systems with clean, maintainable code",
-                  "Performance Optimization: Applications that load fast and handle heavy workloads",
-                  "Security-First Approach: Implementing authentication, data protection, and best practices"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded transition">
-                    <span className="text-green-500 mr-3 mt-1">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+          {/* Right - Experience */}
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                <FiBriefcase className="text-purple-600 dark:text-purple-400 text-xl" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Experience
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-medium text-gray-800 dark:text-gray-200">
+                      Freelance Work
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                      Built ThugTap - multiplayer gaming platform (Next.js, Supabase)
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800 dark:text-gray-200">
+                      Personal Projects
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                      Rentpy (rental marketplace), Pestiguide (college project)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
+                <FiUser className="text-amber-600 dark:text-amber-400 text-xl" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Beyond Code
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Passionate about solving real problems<br />
+                  Enjoy learning new technologies<br />
+                  Focus on clean, maintainable code
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Simple Bottom Text */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-600 dark:text-gray-400">
+            Building things that work, learning every day, and excited for what's next.
+          </p>
         </div>
       </div>
     </section>

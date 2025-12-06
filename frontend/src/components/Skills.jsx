@@ -6,11 +6,16 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
+  SiNextdotjs,
   SiNodedotjs,
   SiExpress,
   SiPrisma,
   SiMongodb,
   SiPostgresql,
+  SiSupabase,
+  SiVercel,
+  SiRender,
+  SiGooglemaps,
   SiGit,
   SiPostman
 } from "react-icons/si";
@@ -26,6 +31,16 @@ const VSCodeIcon = () => (
   </svg>
 );
 
+const RazorpayIcon = () => (
+  <svg 
+    viewBox="0 0 24 24" 
+    className="w-6 h-6 text-indigo-600"
+    fill="currentColor"
+  >
+    <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 22.5C6.201 22.5 1.5 17.799 1.5 12S6.201 1.5 12 1.5 22.5 6.201 22.5 12 17.799 22.5 12 22.5zm4.5-10.5h-3v-3h3v3zm-6 0h-3v-3h3v3zm6 3h-3v3h3v-3zm-6 0h-3v3h3v-3z"/>
+  </svg>
+);
+
 const Skills = () => {
   const skills = [
     {
@@ -37,6 +52,7 @@ const Skills = () => {
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" size={24} /> },
         { name: "TypeScript", icon: <SiTypescript className="text-blue-600" size={24} /> },
         { name: "React", icon: <SiReact className="text-blue-400" size={24} /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-gray-800 dark:text-gray-200" size={24} /> },
         { name: "Zod", icon: <span className="text-sm font-bold text-purple-600">Zod</span> },
       ],
     },
@@ -45,11 +61,20 @@ const Skills = () => {
       items: [
         { name: "Node.js", icon: <SiNodedotjs className="text-green-500" size={24} /> },
         { name: "Express", icon: <SiExpress className="text-gray-800 dark:text-gray-200" size={24} /> },
+        { name: "Supabase", icon: <SiSupabase className="text-green-500" size={24} /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-600" size={24} /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-700" size={24} /> },
         { name: "Prisma", icon: <SiPrisma className="text-blue-800 dark:text-blue-300" size={24} /> },
         { name: "REST APIs", icon: <span className="text-sm font-bold text-green-600">REST</span> },
-       ],
+      ],
+    },
+    {
+      category: "APIs & Services",
+      items: [
+        { name: "Google Maps", icon: <SiGooglemaps className="text-red-500" size={24} /> },
+        { name: "Razorpay", icon: <RazorpayIcon /> },
+        { name: "Postman", icon: <SiPostman className="text-orange-500" size={24} /> },
+      ],
     },
     {
       category: "Languages & Tools",
@@ -58,7 +83,8 @@ const Skills = () => {
         { name: "SQL", icon: <FaDatabase className="text-blue-500" size={24} /> },
         { name: "Git", icon: <SiGit className="text-orange-600" size={24} /> },
         { name: "VS Code", icon: <VSCodeIcon className="text-blue-500" size={24} /> },
-        { name: "Postman", icon: <SiPostman className="text-orange-500" size={24} /> },
+        { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" size={24} /> },
+        { name: "Render", icon: <SiRender className="text-blue-400" size={24} /> },
       ],
     },
   ];
@@ -82,8 +108,10 @@ const Skills = () => {
                     key={i}
                     className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="mb-2">{item.icon}</div>
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <div className="mb-2 flex items-center justify-center h-6">
+                      {item.icon}
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
                       {item.name}
                     </span>
                   </div>

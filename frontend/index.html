@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV0KL4K6K1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+ <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goutam - A Full Stack web developer.</title>
 
-  gtag('config', 'G-NV0KL4K6K1');
-</script>
-  <script>
-    if (
-      localStorage.getItem('darkMode') === 'true' ||
-      (
-        !localStorage.getItem('darkMode') &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      )
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- Umami Analytics - replace with your website ID -->
+    <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_WEBSITE_ID"></script> -->
+  </head>
+  <body class="font-hanken-grotesk antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

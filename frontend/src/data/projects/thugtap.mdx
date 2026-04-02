@@ -1,0 +1,91 @@
+---
+title: 'ThugTap'
+description: 'A multiplayer Ludo platform with room creation, match result submissions, admin panel for approvals, proof uploads, and a secure wallet system with entry-fee locking and automated payouts.'
+image: '/project/thugtap.png'
+technologies:
+  [
+    'Next.js',
+    'Supabase',
+    'PostgreSQL',
+    'Tailwind CSS',
+    'Vercel',
+  ]
+live: 'https://www.thugtap.sbs/'
+timeline: '15 Days'
+role: 'Full Stack'
+team: 'Solo'
+status: 'completed'
+featured: true
+challenges:
+  [
+    'Wallet & coin management system',
+    'Entry‑fee locking mechanism',
+    'Match result verification',
+    'Admin approval workflow',
+    'Automated payout system',
+  ]
+learnings:
+  [
+    'Real‑money transaction flows (virtual currency)',
+    'Admin panel architecture',
+    'Proof upload and verification',
+    'Secure wallet implementation',
+    'Production deployment with custom domain',
+  ]
+isPublished: true
+---
+
+# ThugTap: Multiplayer Ludo Platform
+
+## Overview
+
+ThugTap is a multiplayer Ludo platform where users can create or join rooms, play matches, and earn coins. It features a full admin panel for match approvals, proof verification, and wallet management — deployed live at [thugtap.sbs](https://www.thugtap.sbs/).
+
+## What Users Can Do
+
+- **Create / Join Rooms:** Set up a Ludo room with an entry fee or join an existing one.
+- **Submit Match Results:** Upload proof of match outcome after the game.
+- **Manage Wallet:** Add coins, lock entry fees, and withdraw winnings.
+- **Track History:** View past matches, results, and transaction history.
+
+## Admin Panel Features
+
+- **Approve / Reject Results:** Review submitted proof and approve or reject match outcomes.
+- **Proof Uploads:** View screenshots or recordings submitted by players.
+- **Coin Management:** Add coins to user wallets manually.
+- **Withdrawal Approvals:** Review and process user withdrawal requests.
+
+## Why I Built This
+
+A client approached me with the need for a real‑money multiplayer gaming platform. Handling wallet logic, match verification, and automated payouts without errors is a significant engineering challenge. I built ThugTap end‑to‑end – from the game room flow to the financial layer – using modern tools like Next.js and Supabase, and delivered a fully functional, production‑ready solution.
+
+## Tech Stack
+
+- **Next.js** – React framework for frontend and API routes
+- **Supabase** – backend database and authentication
+- **PostgreSQL** – relational database for users, rooms, transactions
+- **Tailwind CSS** – styling
+- **Vercel** – hosting and continuous deployment
+
+## Technical Highlights
+
+### Wallet & Coin System
+
+- Entry fees are locked when a user joins a room — coins are held until the match result is verified.
+- Automated payout releases coins to the winner after admin approval.
+- Withdrawal requests go through an admin review queue before processing.
+- Supabase’s row‑level security (RLS) ensures data integrity for wallet balances.
+
+### Match Flow
+
+- User creates a room with a defined entry fee.
+- Opponent joins and both coins are locked in the system.
+- After the game, both players submit result with proof (screenshots/recordings).
+- Admin reviews and approves — winner receives the combined pot.
+
+### Admin Panel
+
+- Built a dedicated admin dashboard for result management.
+- Proof viewer for uploaded images.
+- Coin addition and withdrawal management interfaces.
+- Uses Next.js API routes and Supabase queries for secure admin operations.

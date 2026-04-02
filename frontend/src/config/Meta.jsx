@@ -1,0 +1,103 @@
+import { about } from './About';
+import { heroConfig } from './Hero';
+
+export const siteConfig = {
+  name: heroConfig.name,
+  title: 'Sleek Portfolio',
+  description: 'Sleek Portfolio Template by @Ramxcodes',
+  url: import.meta.env.VITE_URL || 'http://localhost:3000',
+  ogImage: '/meta/opengraph-image.png',
+  author: {
+    name: about.name,
+    twitter: '@ramxcodes',
+    github: 'ramxcodes',
+    linkedin: 'ramxcodes',
+    email: 'ramxcodes@gmail.com',
+  },
+  keywords: [
+    'portfolio',
+    'developer',
+    'full-stack',
+    'react',
+    'nextjs',
+    'typescript',
+    'web development',
+    heroConfig.name.toLowerCase(),
+  ],
+};
+
+export const pageMetadata = {
+  '/': {
+    title: `${heroConfig.name} - ${heroConfig.title}`,
+    description: `${about.description} Explore my projects, experience, and technical expertise.`,
+    keywords: ['portfolio', 'developer', 'full-stack', 'web development', 'projects'],
+    ogImage: '/meta/hero.png',
+    twitterCard: 'summary_large_image',
+  },
+  '/contact': {
+    title: 'Contact - Get in Touch',
+    description: "Get in touch with me for collaborations, projects, or opportunities. I'd love to hear from you!",
+    keywords: ['contact', 'hire', 'collaboration', 'freelance', 'developer'],
+    ogImage: '/assets/logo.png',
+    twitterCard: 'summary',
+  },
+  '/work-experience': {
+    title: 'Work Experience - Professional Journey',
+    description: 'Explore my professional work experience across different companies and roles in software development.',
+    keywords: ['work experience', 'career', 'professional', 'software developer', 'employment history'],
+    ogImage: '/meta/work.png',
+    twitterCard: 'summary_large_image',
+  },
+  '/projects': {
+    title: 'Projects - My Work & Projects Portfolio',
+    description: 'Discover my projects and work across different technologies and domains.',
+    keywords: ['projects', 'portfolio', 'web development', 'applications', 'software'],
+    ogImage: '/meta/projects.png',
+    twitterCard: 'summary_large_image',
+  },
+  '/blog': {
+    title: 'Blog - Thoughts & Tutorials',
+    description: 'Read my thoughts, tutorials, and insights on engineering, programming, and web development.',
+    keywords: ['blog', 'tutorials', 'programming', 'web development', 'technical writing'],
+    ogImage: '/meta/blogs.png',
+    twitterCard: 'summary_large_image',
+  },
+  '/resume': {
+    title: 'Resume - Professional CV',
+    description: `View and download ${heroConfig.name}'s professional resume and CV.`,
+    keywords: ['resume', 'cv', 'professional', 'skills', 'qualifications', 'download'],
+    ogImage: '/meta/resume.png',
+    twitterCard: 'summary',
+  },
+  '/gears': {
+    title: 'Gears - My Setup & Tools',
+    description: 'Discover the tools, devices, and software I use to get my work done efficiently.',
+    keywords: ['setup', 'tools', 'devices', 'software', 'productivity', 'development environment'],
+    ogImage: '/meta/gears.png',
+    twitterCard: 'summary_large_image',
+  },
+  '/setup': {
+    title: 'Setup Guide - VS Code Configuration',
+    description: 'Complete guide to setting up VS Code with my preferred configuration, extensions, and fonts.',
+    keywords: ['vscode', 'setup', 'configuration', 'extensions', 'development environment', 'guide'],
+    ogImage: '/meta/setup.png',
+    twitterCard: 'summary_large_image',
+  },
+};
+
+export function getPageMetadata(pathname) {
+  return pageMetadata[pathname] || pageMetadata['/'];
+}
+
+// Note: generateMetadata was Next.js specific — use react-helmet-async instead
+// Install: npm install react-helmet-async
+export function generateMetaTags(pathname) {
+  const pageMeta = getPageMetadata(pathname);
+  return {
+    title: pageMeta.title,
+    description: pageMeta.description,
+    keywords: pageMeta.keywords?.join(', '),
+    ogImage: pageMeta.ogImage || siteConfig.ogImage,
+    twitterCard: pageMeta.twitterCard || 'summary_large_image',
+  };
+}

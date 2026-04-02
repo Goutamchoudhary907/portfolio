@@ -1,0 +1,108 @@
+---
+title: 'Rentpy'
+description: 'A full-stack room renting marketplace for students, short-term travelers, and long-term stays, featuring JWT auth, Google Maps integration, location‑based search, and Razorpay payments.'
+image: '/project/rentpy.png'
+technologies:
+  [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
+    'Prisma',
+    'Razorpay',
+    'Google Maps API',
+  ]
+github: 'https://github.com/Goutamchoudhary907/Room-Renting'
+live: 'https://rentpy.vercel.app/'
+timeline: '3 Months'
+role: 'Full Stack'
+team: 'Solo'
+status: 'completed'
+featured: true
+challenges:
+  [
+    'Google Maps API integration (location autocomplete, interactive maps)',
+    'Razorpay payment gateway integration',
+    'Database schema design',
+    'Booking conflict detection and availability management',
+  ]
+learnings:
+  [
+    'Full-stack architecture from scratch',
+    'PostgreSQL with Prisma ORM',
+    'Maps and geolocation APIs',
+    'Payment gateway integration',
+    'JWT auth implementation',
+  ]
+isPublished: true
+---
+
+# Rentpy: Room Renting Marketplace
+
+## Overview
+
+Rentpy is a full-stack rental platform built to help students, short-term travelers, and long-term stays find and book rooms easily. I built the entire project independently — from the React frontend to the Node.js + PostgreSQL backend — as a production-ready MVP for a real-world startup idea.
+
+## What Users Can Do
+
+- **Search Rooms:** Filter listings by location, price, duration, and availability.
+- **View on Map:** Visualize properties and routes using Google Maps API.
+- **Book Rooms:** Secure short-term or long-term room bookings.
+- **Pay Online:** Integrated Razorpay for fast and secure payments.
+- **Manage Listings:** Hosts can list, edit, and manage their properties.
+- **Authenticate Securely:** JWT-based auth with protected routes.
+
+## Why I Built This
+
+The problem was simple — finding a room as a student or traveler is painful:
+
+- Listings are scattered across WhatsApp groups and local agents.
+- No reliable platform exists for short-term or long-term stays.
+- Scams are common with no verification or payment safety.
+
+Rentpy solves this with a clean, verified, and payment-secured marketplace.
+
+## Tech Stack
+
+- React + TypeScript
+- Tailwind CSS
+- Node.js + Express.js
+- PostgreSQL
+- Prisma ORM
+- JWT Authentication
+- Google Maps API
+- Razorpay SDK
+
+## Technical Highlights
+
+### Authentication
+- Implemented JWT-based authentication with secure httpOnly cookies
+- Protected routes on both frontend and backend
+- Handled token expiry by redirecting users to login
+
+### Google Maps Integration
+- Location autocomplete for listing creation and search
+- Property locations shown as approximate areas (circle radius) to protect exact location privacy until booking is confirmed
+- Route display from user location to property area
+
+### Payment System
+- Integrated Razorpay for secure online payments
+- Order creation and payment verification on the backend
+
+### Booking Management
+- Implemented availability checking to prevent double‑booking
+- Conflict detection ensures a room cannot be booked for overlapping dates
+
+### Database Design
+- Designed a normalized PostgreSQL schema with Prisma
+- Tables for users, listings, bookings, and payments
+- Efficient queries with Prisma's type-safe ORM
+
+## Future Plans
+
+- Add reviews and ratings for hosts and rooms
+- Implement AI‑powered dynamic search to provide smarter, context‑aware room recommendations
+- Mobile app with React Native

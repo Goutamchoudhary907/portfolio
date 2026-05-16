@@ -14,8 +14,11 @@ export const experiences = [
     location: 'Remote',
     image: '/company/moonmvp.png',
     description: [
-      'Built full-stack features using React, Node.js, and Express, handling both frontend UI and backend APIs.',
-      'Implemented end-to-end functionality, integrated databases, and optimized performance for real-world production use.',
+       'Integrated Gemini and Claude AI APIs into AdvocAI, a legal case management platform, enabling real-time document review and generation with streaming responses using React and Node.js.',
+       'Built complete shipping flow for GetPalex bookstore by integrating EasyPost API — handling shipment creation, live tracking and delivery status across the full stack.',
+       'Integrated Shopify API into Stockflow, an inventory management system, to sync product sales data and automate stock level updates in real time.',
+       'Implemented offline-first architecture in Stockflow using IndexedDB — storing data locally when offline and syncing to server on reconnection',
+       'Delivered full-stack features across 6+ client projects simultaneously using React, Node.js, Express, PostgreSQL and MongoDB'
     ],
     startDate: 'Dec 2025',
     endDate: 'Present',

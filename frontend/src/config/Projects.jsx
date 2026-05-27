@@ -7,7 +7,7 @@ import Prisma from '../components/technologies/Prisma.jsx';
 import ReactIcon from '../components/technologies/ReactIcon';
 import TailwindCss from '../components/technologies/TailwindCss';
 import TypeScript from '../components/technologies/TypeScript';
-
+import Nextjs from "../components/technologies/NextJs.jsx"
 export const projects = [
   {
     title: 'Rentpy',
@@ -36,10 +36,10 @@ export const projects = [
     image: '/project/thugtap.png',
     link: 'https://www.thugtap.sbs/',
     technologies: [
-      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Nextjs', icon: <Nextjs key="nextjs" /> },
       { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
       { name: 'Express.js', icon: <ExpressJs key="expressjs" /> },
-      { name: 'MongoDB', icon: <MongoDB key="mongodb" /> },
+      { name: 'PostgreSQL', icon: <PostgreSQL key="postgresql" /> },
       { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
     ],
     live: 'https://www.thugtap.sbs/',
